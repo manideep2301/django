@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSRS</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'student_registration' %}">Student Registration</a>
+      <a href="{% url 'registration_management' %}">Registration Management</a>
+      <a href="{% url 'sport_management' %}">Sport Management</a>
+      <a href="{% url 'generate_reports' %}">Generate Reports</a>
+      <a href="{% url 'logout_user' %}">Logout</a>
+    </nav>
+    <div class="content">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+</body>
+</html>

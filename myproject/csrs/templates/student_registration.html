@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Student Registration</h1>
+<form method="post">
+  {% csrf_token %}
+  <label for="sport_id">Select a Sport:</label>
+  <select name="sport_id" required>
+    {% for sport in sports %}
+      <option value="{{ sport.id }}">{{ sport.name }}</option>
+    {% endfor %}
+  </select>
+  <button type="submit">Register</button>
+</form>
+{% endblock %}
